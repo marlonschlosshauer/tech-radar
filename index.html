@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="de">
+    <head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="src/css/styles.css">
+	<style>
+	 .content {
+	     max-width: 1450px;
+	     margin: auto;
+	 }
+
+	 #id > * { font-size: 0.85rem;}
+
+	</style>
+    </head>
+    <body>
+	<div class="content">
+
+	    <svg id="radar"></svg>
+	    <script src="https://d3js.org/d3.v4.min.js"></script>
+	    <script src="radar.js"></script>
+	    <script>
+	     radar_visualization({
+		 svg_id: "radar",
+		 width: 1450,
+		 height: 1000,
+		 colors: {
+		     background: "#fff",
+		     grid: "#bbb",
+		     inactive: "#ddd"
+		 },
+		 title: "My Preferred Technologies",
+		 quadrants: [
+		     { name: "Infrastructure" },
+		     { name: "Data Management" },
+		     { name: "Lanugages" },
+		     { name: "App Development" }
+		 ],
+		 rings: [
+		     { name: "ADOPT",  color: "#93c47d" },
+		     { name: "TRIAL", color: "#b7e1cd" },
+		     { name: "ASSES",  color: "#fce8b2" },
+		     { name: "HOLD",  color: "#f4c7c3" }
+		 ],
+		 print_layout: true,
+		 entries: [
+		     { "label": "Clojure", "quadrant": 0, "ring": 0, "moved": 1, "link": "#"},
+		     { "label": "ClojureScript", "quadrant": 0, "ring": 0, "moved": 1, "link": "#"},
+		     { "label": "JavaScript", "quadrant": 0, "ring": 0, "moved": 0, "link": "#"},
+		     { "label": "TypeScript", "quadrant": 0, "ring": 1, "moved": 1, "link": "#"},
+		     { "label": "Python", "quadrant": 0, "ring": 2, "moved": -1, "link": "#"},
+		     { "label": "Haskell", "quadrant": 0, "ring": 3, "moved": -1, "link": "#"},
+		     { "label": "C#", "quadrant": 0, "ring": 2, "moved": 0, "link": "#"},
+		     { "label": "Java", "quadrant": 0, "ring": 3, "moved": -1, "link": "#"},
+		     { "label": "Antd", "quadrant": 1, "ring": 0, "moved": -1, "link": "#"},
+		     { "label": "React", "quadrant": 1, "ring": 0, "moved": 1, "link": "#"},
+		     { "label": "Angular Material", "quadrant": 1, "ring": 3, "moved": -1, "link": "#"},
+		     { "label": "Bootstrap", "quadrant": 1, "ring": 2, "moved": -1, "link": "#"},
+		     { "label": "Base Web", "quadrant": 1, "ring": 0, "moved": 1, "link": "#"},
+		     { "label": "ChakraUI", "quadrant": 1, "ring": 2, "moved": 1, "link": "#"},
+		     { "label": "Angular", "quadrant": 1, "ring": 3, "moved": -1, "link": "#"},
+		     { "label": "Reagent", "quadrant": 1, "ring": 1, "moved": 1, "link": "#"},
+		     { "label": "reacl-c", "quadrant": 1, "ring": 1, "moved": 1, "link": "#"},
+		     { "label": "GraphQL", "quadrant": 2, "ring": 1, "moved": 1, "link": "#"},
+		     { "label": "Spring", "quadrant": 2, "ring": 3, "moved": -1, "link": "#"},
+		     { "label": "Django", "quadrant": 2, "ring": 3, "moved": -1, "link": "#"},
+		     { "label": "ExpressJS", "quadrant": 2, "ring": 0, "moved": 1, "link": "#"},
+		     { "label": "Akka", "quadrant": 2, "ring": 1, "moved": 1, "link": "#"},
+		     { "label": "MySQL", "quadrant": 3, "ring": 0, "moved": 0, "link": "#"},
+		     { "label": "Monger", "quadrant": 3, "ring": 0, "moved": 1, "link": "#"},
+		     { "label": "MongoDB", "quadrant": 3, "ring": 0, "moved": 1, "link": "#"},
+		     { "label": "Hibernate", "quadrant": 3, "ring": 1, "moved": 0, "link": "#"},
+		     { "label": "JOOQ", "quadrant": 3, "ring": 2, "moved": 0, "link": "#"},
+		 ],
+	     });
+	    </script>
+	</div>
+    </body>
+</html>
+
